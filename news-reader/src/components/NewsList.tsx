@@ -10,19 +10,13 @@ type Article = {
   urlToImage: string;
 };
 
-const NewsList = () => {
-  const [articles, setArticles] = useState([]);
+type Props = {
+  articles: Article[];
+  handleArticleRemoval: any;
+}
 
-  useEffect(() => {
-    const getArticles = async () => {
-      const res = await Axios.get(
-        "https://newsapi.org/v2/top-headlines?country=us&apiKey=8dcc74ec482a4d60bfaa469de67dd7ea"
-      );
-      setArticles(res.data.articles);
-    };
-
-    getArticles();
-  });
+const NewsList: React.FC<Props> = ({ articles, handleArticleRemoval }) => {
+  
   return (
     <Box sx={{ flexGrow: 1 }} style={{ width: "90%", margin: "0 auto" }}>
       <Grid
@@ -38,6 +32,8 @@ const NewsList = () => {
                 description={article.description}
                 url={article.url}
                 urlToImage={article.urlToImage}
+                index={index}
+                removeArticle={handleArticleRemoval}
               />
             </Grid>
           );

@@ -7,11 +7,15 @@ const NewsItem = ({
   description,
   url,
   urlToImage,
+  index,
+  removeArticle
 }: {
   title: string;
   description: string;
   url: string;
   urlToImage: string;
+  index: any;
+  removeArticle: any;
 }) => {
   return (
     <Card style={{ padding: "5%" }}>
@@ -27,6 +31,10 @@ const NewsItem = ({
       <Typography variant="body2" color="text.secondary">
         {description}
       </Typography>
+      <br></br>
+      <Button variant="outlined" onClick={() => removeArticle(index)} startIcon={<DeleteIcon />}>
+        Delete
+      </Button>
     </Card>
   );
 };

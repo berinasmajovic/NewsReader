@@ -1,19 +1,21 @@
-import { Typography } from '@mui/material';
-import React from 'react';
-import './App.css';
-import ButtonAppBar from './components/common/ButtonAppBar';
-import NewsList from './components/NewsList';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Homepage from "./pages/Homepage";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
+
   return (
     <div className="App">
-      <ButtonAppBar />
-      <br></br>
-      <Typography variant="h6" gutterBottom component="div">
-      Read articles and breaking news headlines from news sources and blogs across the web with News Reader website!
-      </Typography>
-      <br></br>
-      <NewsList />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/homepage" element={<Homepage />} />
+        </Routes>
+      </Router>
+
     </div>
   );
 }
