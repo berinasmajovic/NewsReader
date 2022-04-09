@@ -1,4 +1,6 @@
-import { Card, CardMedia, Grid, Typography } from "@mui/material";
+import { Button, Card, CardMedia, Grid, Typography } from "@mui/material";
+import DeleteIcon from '@mui/icons-material/Delete';
+
 
 const NewsItem = ({
   title,
@@ -12,7 +14,7 @@ const NewsItem = ({
   urlToImage: string;
 }) => {
   return (
-    <Card>
+    <Card style={{ padding: "5%" }}>
       <CardMedia
         component="img"
         height="140"

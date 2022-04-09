@@ -16,7 +16,7 @@ const NewsList = () => {
   useEffect(() => {
     const getArticles = async () => {
       const res = await Axios.get(
-        "https://newsapi.org/v2/top-headlines?country=us&apiKey=520fb46b0db64a48b14e2311e77cc5ee"
+        "https://newsapi.org/v2/top-headlines?country=us&apiKey=8dcc74ec482a4d60bfaa469de67dd7ea"
       );
       setArticles(res.data.articles);
     };
@@ -24,7 +24,7 @@ const NewsList = () => {
     getArticles();
   });
   return (
-    <Box sx={{ flexGrow: 1 }} style={{width: "90%", margin: "0 auto"}}>
+    <Box sx={{ flexGrow: 1 }} style={{ width: "90%", margin: "0 auto" }}>
       <Grid
         container
         spacing={5}
