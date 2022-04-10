@@ -14,4 +14,5 @@ You can access the application by logging in with your email and password (if yo
 For testing purpose, you can use this credentials:
 
 email: test@gmail.com
+
 password: 123456
