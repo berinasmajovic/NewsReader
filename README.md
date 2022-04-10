@@ -12,5 +12,6 @@ News Reader is an application that displays news list for logged users. First pa
 You can access the application by creating account with email and password (link Register on the first page of the application).
 You can access the application by logging in with your email and password (if you have an account) on the first page of the application.
 For testing purpose, you can use this credentials:
+
 email: test@gmail.com
 password: 123456
