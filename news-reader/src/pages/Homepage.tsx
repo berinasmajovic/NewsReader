@@ -17,7 +17,7 @@ export default function Homepage() {
   useEffect(() => {
     const getArticles = async () => {
       const res = await Axios.get(
-        "https://newsapi.org/v2/top-headlines?country=us&apiKey=1b1997abcc9d4da98732caf05a6deba6"
+        "https://newsapi.org/v2/top-headlines?country=us&apiKey=a63246c969ac4c969ccde53af3461902"
       );
       setArticles(res.data.articles);
     };
